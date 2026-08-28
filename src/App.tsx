@@ -22,22 +22,22 @@ const features = [
   {
     icon: Gamepad2,
     title: "Multiple Games",
-    text: "Explore a variety of digital games and entertainment options.",
+    text: "Explore a variety of digital games and entertainment options",
   },
   {
     icon: Smartphone,
     title: "Mobile Friendly",
-    text: "Enjoy a smooth experience across modern smartphones and devices.",
+    text: "Enjoy a smooth experience across modern smartphones and devices",
   },
   {
     icon: ShieldCheck,
     title: "Simple Experience",
-    text: "A clean platform designed with an easy-to-use interface.",
+    text: "A clean platform designed with an easy-to-use interface",
   },
   {
     icon: Headphones,
     title: "Support",
-    text: "Get assistance whenever you need help with the platform.",
+    text: "Get assistance whenever you need help with the platform",
   },
 ];
 
@@ -174,7 +174,7 @@ function App() {
 
                 <h1>
                   Start your
-                  <strong> gaming journey.</strong>
+                  <strong> gaming journey</strong>
                 </h1>
 
                 <p>
@@ -208,12 +208,12 @@ function App() {
 
               <h2>
                 Everything you need,
-                <span> in one place.</span>
+                <span> in one place</span>
               </h2>
 
               <p>
                 Discover the platform features and digital entertainment
-                experience by scrolling below.
+                experience by scrolling below
               </p>
 
               <a href="#features" className="explore-button">
@@ -239,7 +239,7 @@ function App() {
 
               <p>
                 A straightforward platform designed for a smooth digital
-                gaming experience.
+                gaming experience
               </p>
             </div>
 
@@ -290,7 +290,7 @@ function App() {
 
               <h2>
                 Built for a
-                <span> simpler experience.</span>
+                <span> simpler experience</span>
               </h2>
 
               <p>
@@ -355,7 +355,7 @@ function App() {
 
               <h2>
                 Frequently asked
-                <span> questions.</span>
+                <span> questions</span>
               </h2>
             </div>
 
