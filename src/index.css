@@ -1860,3 +1860,117 @@ body {
       #eef4ff 100%
     ) !important;
 }
+/* =========================================================
+   FINAL MOBILE NAV FIX
+   Desktop UI untouched
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  /* Hide desktop navigation on mobile */
+  .nav-links {
+    display: none !important;
+  }
+
+  /* Show hamburger button */
+  .menu-button {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    padding: 0;
+    border: 1px solid rgba(59, 130, 246, 0.18);
+    border-radius: 12px;
+
+    background: rgba(59, 130, 246, 0.06);
+    color: #2563eb !important;
+
+    cursor: pointer;
+    z-index: 200;
+  }
+
+  .menu-button svg {
+    width: 22px;
+    height: 22px;
+    color: #2563eb !important;
+  }
+
+  /* Open mobile menu */
+  .nav-links.mobile-open {
+    position: absolute !important;
+
+    top: 68px;
+    left: 15px;
+    right: 15px;
+
+    display: flex !important;
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 0;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(59, 130, 246, 0.14);
+    border-radius: 16px;
+
+    background: rgba(255, 255, 255, 0.97) !important;
+
+    box-shadow:
+      0 20px 50px rgba(15, 23, 42, 0.12),
+      0 0 0 1px rgba(59, 130, 246, 0.04);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    z-index: 150;
+  }
+
+  .nav-links.mobile-open a {
+    display: flex !important;
+    align-items: center;
+
+    width: 100%;
+
+    padding: 16px 18px;
+
+    color: #475569 !important;
+
+    border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .nav-links.mobile-open a:last-child {
+    border-bottom: none;
+  }
+
+  .nav-links.mobile-open a:hover {
+    color: #2563eb !important;
+    background: rgba(59, 130, 246, 0.05);
+  }
+
+  /* Hide desktop Visit Website button */
+  .nav-button {
+    display: none !important;
+  }
+}
+
+/* Desktop stays exactly as before */
+@media (min-width: 701px) {
+  .menu-button {
+    display: none !important;
+  }
+
+  .nav-links {
+    display: flex !important;
+  }
+
+  .nav-button {
+    display: inline-flex !important;
+  }
+}
