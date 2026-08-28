@@ -1436,3 +1436,126 @@ button {
     font-size: 12px;
   }
 }
+/* ================= PREMIUM WHITE BACKGROUND ================= */
+
+html,
+body {
+  background: #f7f9fc !important;
+  color: #0f172a;
+}
+
+.site {
+  background:
+    radial-gradient(circle at 80% 10%, rgba(37, 99, 235, 0.10), transparent 28%),
+    radial-gradient(circle at 10% 70%, rgba(96, 165, 250, 0.07), transparent 25%),
+    linear-gradient(135deg, #ffffff 0%, #f7f9fc 50%, #eef4ff 100%) !important;
+}
+
+/* Navbar */
+.navbar {
+  background: rgba(255, 255, 255, 0.88) !important;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08) !important;
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.05);
+}
+
+/* Text */
+.nav-links a {
+  color: #64748b !important;
+}
+
+.nav-links a:hover {
+  color: #0f172a !important;
+}
+
+/* Main visual card */
+.visual-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(37, 99, 235, 0.14) !important;
+  box-shadow:
+    0 30px 80px rgba(15, 23, 42, 0.12),
+    0 8px 25px rgba(37, 99, 235, 0.08) !important;
+}
+
+/* Top bar inside image card */
+.visual-top {
+  background: rgba(255, 255, 255, 0.92) !important;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.07);
+}
+
+.visual-top > span {
+  color: #64748b !important;
+}
+
+.online {
+  color: #475569 !important;
+}
+
+/* Floating cards */
+.floating-card {
+  background: rgba(255, 255, 255, 0.94) !important;
+  color: #475569 !important;
+  border: 1px solid rgba(37, 99, 235, 0.12) !important;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12) !important;
+}
+
+/* Login button */
+.login-button,
+.top-login {
+  background: #ffffff !important;
+  color: #334155 !important;
+  border-color: rgba(37, 99, 235, 0.18) !important;
+}
+
+/* Secondary buttons */
+.secondary-button {
+  color: #334155 !important;
+  border-color: rgba(15, 23, 42, 0.10) !important;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* Section backgrounds */
+.about-section {
+  background: rgba(255, 255, 255, 0.65) !important;
+  border-color: rgba(15, 23, 42, 0.06) !important;
+}
+
+/* Feature cards */
+.feature-card {
+  background: rgba(255, 255, 255, 0.85) !important;
+  border-color: rgba(15, 23, 42, 0.07) !important;
+  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.05);
+}
+
+.feature-card p,
+.section-heading p,
+.about-content p {
+  color: #64748b !important;
+}
+
+/* CTA */
+.cta-card {
+  background:
+    radial-gradient(circle at 80% 50%, rgba(37, 99, 235, 0.10), transparent 40%),
+    #ffffff !important;
+  border-color: rgba(37, 99, 235, 0.14) !important;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.07);
+}
+
+/* Footer */
+.footer {
+  border-color: rgba(15, 23, 42, 0.07) !important;
+}
+
+/* Mobile menu */
+@media (max-width: 700px) {
+  .nav-links.mobile-open {
+    background: #ffffff !important;
+    border-color: rgba(15, 23, 42, 0.08) !important;
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.10);
+  }
+
+  .nav-links.mobile-open a {
+    color: #475569 !important;
+    border-color: rgba(15, 23, 42, 0.06) !important;
+  }
+}
