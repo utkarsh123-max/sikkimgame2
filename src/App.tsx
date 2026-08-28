@@ -45,7 +45,7 @@ const faqs = [
   {
     question: "What is Sikkim Game?",
     answer:
-      "Sikkim Game is an online gaming platform offering digital entertainment experiences.",
+      "Sikkim Game is an online gaming platform that offers users access to various entertainment options, including color prediction games and other digital activities. The platform is designed with a simple interface, allowing players to register quickly and explore different game modes. Many users appreciate its easy navigation and mobile-friendly experience.",
   },
   {
     question: "Can I access it from my phone?",
