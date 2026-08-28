@@ -1,184 +1,379 @@
+/* ================================
+   SIKKIM GAME — PREMIUM LIGHT UI
+   ================================ */
+
+:root {
+  --bg: #f6f9ff;
+  --bg-soft: #ffffff;
+  --text: #172033;
+  --text-h: #0f172a;
+  --muted: #64748b;
+
+  --accent: #2563eb;
+  --accent-light: #4f7df3;
+  --accent-bg: #edf4ff;
+  --accent-border: #8db4ff;
+
+  --border: #dfe7f2;
+  --social-bg: #f5f8fd;
+
+  --shadow: 0 12px 35px rgba(37, 99, 235, 0.10);
+  --shadow-lg: 0 25px 70px rgba(15, 23, 42, 0.12);
+}
+
+/* ================================
+   GENERAL
+   ================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+
+  background:
+    radial-gradient(
+      circle at 10% 5%,
+      rgba(59, 130, 246, 0.12),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 15%,
+      rgba(96, 165, 250, 0.10),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      #f8fbff 0%,
+      #eef5ff 48%,
+      #ffffff 100%
+    );
+
+  color: var(--text);
+}
+
+/* ================================
+   COUNTER
+   ================================ */
+
 .counter {
   font-size: 16px;
-  padding: 5px 10px;
-  border-radius: 5px;
+  padding: 7px 13px;
+  border-radius: 10px;
+
   color: var(--accent);
   background: var(--accent-bg);
-  border: 2px solid transparent;
-  transition: border-color 0.3s;
-  margin-bottom: 24px;
 
-  &:hover {
-    border-color: var(--accent-border);
-  }
-  &:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-  }
+  border: 1px solid rgba(37, 99, 235, 0.16);
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+
+  margin-bottom: 24px;
 }
+
+.counter:hover {
+  border-color: var(--accent-border);
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.10);
+  transform: translateY(-1px);
+}
+
+.counter:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* ================================
+   HERO
+   ================================ */
 
 .hero {
   position: relative;
-
-  .base,
-  .framework,
-  .vite {
-    inset-inline: 0;
-    margin: 0 auto;
-  }
-
-  .base {
-    width: 170px;
-    position: relative;
-    z-index: 0;
-  }
-
-  .framework,
-  .vite {
-    position: absolute;
-  }
-
-  .framework {
-    z-index: 1;
-    top: 34px;
-    height: 28px;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg)
-      scale(1.4);
-  }
-
-  .vite {
-    z-index: 0;
-    top: 107px;
-    height: 26px;
-    width: auto;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg)
-      scale(0.8);
-  }
 }
+
+/* Hero visual elements */
+
+.hero .base,
+.hero .framework,
+.hero .vite {
+  inset-inline: 0;
+  margin: 0 auto;
+}
+
+.hero .base {
+  width: 170px;
+  position: relative;
+  z-index: 0;
+}
+
+.hero .framework,
+.hero .vite {
+  position: absolute;
+}
+
+.hero .framework {
+  z-index: 1;
+  top: 34px;
+  height: 28px;
+
+  transform:
+    perspective(2000px)
+    rotateZ(300deg)
+    rotateX(44deg)
+    rotateY(39deg)
+    scale(1.4);
+}
+
+.hero .vite {
+  z-index: 0;
+  top: 107px;
+  height: 26px;
+  width: auto;
+
+  transform:
+    perspective(2000px)
+    rotateZ(300deg)
+    rotateX(40deg)
+    rotateY(39deg)
+    scale(0.8);
+}
+
+/* ================================
+   CENTER CONTENT
+   ================================ */
 
 #center {
   display: flex;
   flex-direction: column;
+
   gap: 25px;
+
   place-content: center;
   place-items: center;
+
   flex-grow: 1;
 
-  @media (max-width: 1024px) {
-    padding: 32px 20px 24px;
-    gap: 18px;
-  }
+  background: transparent;
 }
+
+/* ================================
+   NEXT STEPS
+   ================================ */
 
 #next-steps {
   display: flex;
+
   border-top: 1px solid var(--border);
+
+  background: rgba(255, 255, 255, 0.72);
+
   text-align: left;
 
-  & > div {
-    flex: 1 1 0;
-    padding: 32px;
-    @media (max-width: 1024px) {
-      padding: 24px 20px;
-    }
-  }
-
-  .icon {
-    margin-bottom: 16px;
-    width: 22px;
-    height: 22px;
-  }
-
-  @media (max-width: 1024px) {
-    flex-direction: column;
-    text-align: center;
-  }
+  backdrop-filter: blur(14px);
 }
+
+#next-steps > div {
+  flex: 1 1 0;
+  padding: 32px;
+}
+
+#next-steps .icon {
+  margin-bottom: 16px;
+
+  width: 22px;
+  height: 22px;
+
+  color: var(--accent);
+}
+
+/* ================================
+   DOCS
+   ================================ */
 
 #docs {
   border-right: 1px solid var(--border);
-
-  @media (max-width: 1024px) {
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-  }
 }
+
+/* ================================
+   SOCIAL / LINKS
+   ================================ */
 
 #next-steps ul {
   list-style: none;
+
   padding: 0;
+
   display: flex;
   gap: 8px;
+
   margin: 32px 0 0;
-
-  .logo {
-    height: 18px;
-  }
-
-  a {
-    color: var(--text-h);
-    font-size: 16px;
-    border-radius: 6px;
-    background: var(--social-bg);
-    display: flex;
-    padding: 6px 12px;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    transition: box-shadow 0.3s;
-
-    &:hover {
-      box-shadow: var(--shadow);
-    }
-    .button-icon {
-      height: 18px;
-      width: 18px;
-    }
-  }
-
-  @media (max-width: 1024px) {
-    margin-top: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    li {
-      flex: 1 1 calc(50% - 8px);
-    }
-
-    a {
-      width: 100%;
-      justify-content: center;
-      box-sizing: border-box;
-    }
-  }
 }
+
+#next-steps ul .logo {
+  height: 18px;
+}
+
+#next-steps ul a {
+  color: var(--text-h);
+
+  font-size: 16px;
+
+  border-radius: 10px;
+
+  background: var(--social-bg);
+
+  border: 1px solid var(--border);
+
+  display: flex;
+
+  padding: 7px 13px;
+
+  align-items: center;
+  gap: 8px;
+
+  text-decoration: none;
+
+  transition:
+    box-shadow 0.25s ease,
+    transform 0.25s ease,
+    border-color 0.25s ease;
+}
+
+#next-steps ul a:hover {
+  box-shadow: var(--shadow);
+  border-color: rgba(37, 99, 235, 0.25);
+  transform: translateY(-2px);
+}
+
+#next-steps ul a .button-icon {
+  height: 18px;
+  width: 18px;
+}
+
+/* ================================
+   SPACER
+   ================================ */
 
 #spacer {
   height: 88px;
+
   border-top: 1px solid var(--border);
-  @media (max-width: 1024px) {
-    height: 48px;
-  }
+
+  background: rgba(255, 255, 255, 0.45);
 }
+
+/* ================================
+   TICKS
+   ================================ */
 
 .ticks {
   position: relative;
   width: 100%;
+}
 
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    top: -4.5px;
-    border: 5px solid transparent;
+.ticks::before,
+.ticks::after {
+  content: '';
+
+  position: absolute;
+
+  top: -4.5px;
+
+  border: 5px solid transparent;
+}
+
+.ticks::before {
+  left: 0;
+  border-left-color: var(--border);
+}
+
+.ticks::after {
+  right: 0;
+  border-right-color: var(--border);
+}
+
+/* ================================
+   RESPONSIVE
+   ================================ */
+
+@media (max-width: 1024px) {
+  #center {
+    padding: 32px 20px 24px;
+    gap: 18px;
   }
 
-  &::before {
-    left: 0;
-    border-left-color: var(--border);
+  #next-steps {
+    flex-direction: column;
+    text-align: center;
   }
-  &::after {
-    right: 0;
-    border-right-color: var(--border);
+
+  #next-steps > div {
+    padding: 24px 20px;
+  }
+
+  #docs {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  #next-steps ul {
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #next-steps ul li {
+    flex: 1 1 calc(50% - 8px);
+  }
+
+  #next-steps ul a {
+    width: 100%;
+    justify-content: center;
+  }
+
+  #spacer {
+    height: 48px;
+  }
+}
+
+/* ================================
+   MOBILE
+   ================================ */
+
+@media (max-width: 600px) {
+  body {
+    background:
+      radial-gradient(
+        circle at 50% 0%,
+        rgba(59, 130, 246, 0.12),
+        transparent 35%
+      ),
+      linear-gradient(
+        180deg,
+        #f7faff 0%,
+        #ffffff 100%
+      );
+  }
+
+  #center {
+    padding: 22px 14px;
+    gap: 14px;
+  }
+
+  #next-steps ul li {
+    flex: 1 1 100%;
+  }
+
+  .counter {
+    font-size: 14px;
+    margin-bottom: 16px;
   }
 }
