@@ -1762,26 +1762,101 @@ main,
     -webkit-backdrop-filter: blur(18px);
   }
 }
-/* ===== FIX: EXPLORE HEADING VISIBILITY ===== */
+/* =========================================================
+   FINAL LIGHT THEME TEXT FIX
+   Background/UI/layout untouched
+   ========================================================= */
 
-.section-heading h2 {
-  color: #111827 !important;
+/* ---------- EXPLORE HEADING ---------- */
+
+.explore-intro h2 {
+  color: #101828 !important;
   opacity: 1 !important;
   visibility: visible !important;
   text-shadow: none !important;
 }
 
-/* Heading ke andar agar span hai to usko bhi force visible */
-.section-heading h2 span {
-  color: #111827 !important;
+.explore-intro h2 span {
+  color: #4d8cff !important;
   opacity: 1 !important;
   visibility: visible !important;
 }
 
-/* Blue highlighted part */
-.section-heading h2 .highlight,
-.section-heading h2 .accent {
-  color: #3b82f6 !important;
+/* If the highlighted word uses another class */
+.explore-intro h2 .highlight,
+.explore-intro h2 .accent {
+  color: #4d8cff !important;
   opacity: 1 !important;
   visibility: visible !important;
+}
+
+/* ---------- EXPLORE DESCRIPTION ---------- */
+
+.explore-intro p {
+  color: #64748b !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* ---------- EXPLORE BUTTON ---------- */
+
+.explore-button {
+  color: #3b82f6 !important;
+  border-color: rgba(59, 130, 246, 0.25) !important;
+  background: rgba(59, 130, 246, 0.06) !important;
+}
+
+/* ---------- ABOUT TEXT ---------- */
+
+.about-content h2 {
+  color: #101828 !important;
+}
+
+.about-content h2 span {
+  color: #4d8cff !important;
+}
+
+.about-content p {
+  color: #64748b !important;
+}
+
+.about-list div {
+  color: #475569 !important;
+}
+
+/* ---------- FAQ ---------- */
+
+.faq-question {
+  color: #334155 !important;
+}
+
+.faq-answer {
+  color: #64748b !important;
+}
+
+/* ---------- KEEP LIGHT BACKGROUND ---------- */
+
+html,
+body {
+  background: #f7faff !important;
+}
+
+.site {
+  background:
+    radial-gradient(
+      circle at 8% 5%,
+      rgba(70, 130, 255, 0.12),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 92% 15%,
+      rgba(99, 102, 241, 0.09),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #f8fbff 50%,
+      #eef4ff 100%
+    ) !important;
 }
