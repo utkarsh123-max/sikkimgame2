@@ -1762,3 +1762,26 @@ main,
     -webkit-backdrop-filter: blur(18px);
   }
 }
+/* ===== FIX: EXPLORE HEADING VISIBILITY ===== */
+
+.section-heading h2 {
+  color: #111827 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  text-shadow: none !important;
+}
+
+/* Heading ke andar agar span hai to usko bhi force visible */
+.section-heading h2 span {
+  color: #111827 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Blue highlighted part */
+.section-heading h2 .highlight,
+.section-heading h2 .accent {
+  color: #3b82f6 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
