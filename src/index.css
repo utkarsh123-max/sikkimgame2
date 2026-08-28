@@ -1436,14 +1436,198 @@ button {
     font-size: 12px;
   }
 }
-html,
+
+
+/* ===== LIGHT THEME TEXT FIX ===== */
+
 body {
-  background: #f7f9fc !important;
+  color: #0f172a !important;
+}
+
+.hero h1,
+.section-heading h2,
+.about-content h2,
+.cta-card h2 {
+  color: #0f172a !important;
+}
+
+.hero h1 span,
+.section-heading h2 span,
+.about-content h2 span {
+  color: #4d8cff !important;
+}
+
+.hero-text,
+.section-heading p,
+.about-content p {
+  color: #64748b !important;
+}
+
+.faq-question {
+  color: #334155 !important;
+}
+
+.faq-question svg {
+  color: #64748b !important;
+}
+
+.faq-item {
+  border-bottom-color: rgba(15, 23, 42, 0.08) !important;
+}
+
+.about-list div {
+  color: #475569 !important;
+}
+/* ===== PREMIUM LIGHT BACKGROUND ===== */
+
+body {
+  background: #f8fafc !important;
+  color: #0f172a !important;
 }
 
 .site {
+  position: relative;
+  overflow: hidden;
+
   background:
-    radial-gradient(circle at 85% 10%, rgba(59, 130, 246, 0.10), transparent 30%),
-    radial-gradient(circle at 10% 70%, rgba(96, 165, 250, 0.08), transparent 28%),
-    linear-gradient(135deg, #ffffff 0%, #f7f9fc 55%, #eef5ff 100%) !important;
+    radial-gradient(circle at 12% 8%,
+      rgba(59, 130, 246, 0.13),
+      transparent 25%),
+    radial-gradient(circle at 88% 18%,
+      rgba(99, 102, 241, 0.10),
+      transparent 27%),
+    radial-gradient(circle at 50% 65%,
+      rgba(147, 197, 253, 0.10),
+      transparent 30%),
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #f8fbff 48%,
+      #f1f5ff 100%
+    ) !important;
+}
+
+/* subtle premium grid */
+.site::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.32;
+
+  background-image:
+    linear-gradient(rgba(59,130,246,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59,130,246,.035) 1px, transparent 1px);
+
+  background-size: 42px 42px;
+
+  mask-image: linear-gradient(
+    to bottom,
+    black,
+    transparent 80%
+  );
+}
+
+/* soft glowing orbs */
+.site::after {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  top: 220px;
+  right: -180px;
+  border-radius: 50%;
+  pointer-events: none;
+
+  background: rgba(96,165,250,.10);
+  filter: blur(90px);
+}
+
+/* make content stay above effects */
+.navbar,
+main,
+.footer {
+  position: relative;
+  z-index: 2;
+}
+
+/* premium section separation */
+.section,
+.about-section,
+.cta-section {
+  position: relative;
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: min(900px, 80%);
+  height: 1px;
+  transform: translateX(-50%);
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(59,130,246,.16),
+    transparent
+  );
+}
+
+/* dark text for light theme */
+.hero h1,
+.section-heading h2,
+.about-content h2,
+.cta-card h2 {
+  color: #0f172a !important;
+}
+
+.hero-text,
+.section-heading p,
+.about-content p {
+  color: #64748b !important;
+}
+
+.faq-question {
+  color: #334155 !important;
+}
+
+/* glassy cards */
+.feature-card,
+.cta-card,
+.about-box {
+  background: rgba(255,255,255,.72) !important;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border-color: rgba(59,130,246,.10) !important;
+
+  box-shadow:
+    0 20px 60px rgba(15,23,42,.06),
+    inset 0 1px 0 rgba(255,255,255,.9);
+}
+
+/* premium hover */
+.feature-card {
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease,
+    border-color .3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(59,130,246,.25) !important;
+
+  box-shadow:
+    0 28px 70px rgba(37,99,235,.11),
+    0 0 0 1px rgba(59,130,246,.04);
+}
+
+/* cleaner hero visual */
+.visual-card {
+  box-shadow:
+    0 35px 90px rgba(15,23,42,.14),
+    0 0 0 1px rgba(59,130,246,.06);
 }
